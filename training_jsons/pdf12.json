@@ -1,0 +1,170 @@
+{
+    "title": "Generative AI-Driven High-Fidelity Human Motion Simulation",
+    "outline": [
+        {
+            "level": "H1",
+            "text": "Abstract",
+            "page": 1
+        },
+        {
+            "level": "H1",
+            "text": "1. Introduction",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "2. Literature Review",
+            "page": 4
+        },
+        {
+            "level": "H2",
+            "text": "2.1. Human Motion Simulation Methods",
+            "page": 4
+        },
+        {
+            "level": "H2",
+            "text": "2.2. AI for HMS",
+            "page": 5
+        },
+        {
+            "level": "H2",
+            "text": "2.3. Generative Pre-trained Transformers (GPT) and MotionGPT",
+            "page": 6
+        },
+        {
+            "level": "H2",
+            "text": "2.4. HMS with Generative AI",
+            "page": 7
+        },
+        {
+            "level": "H1",
+            "text": "3. Experiment Design and Data Collection",
+            "page": 8
+        },
+        {
+            "level": "H1",
+            "text": "4. Methodology",
+            "page": 10
+        },
+        {
+            "level": "H2",
+            "text": "4.1. Human Subject Experiments",
+            "page": 10
+        },
+        {
+            "level": "H2",
+            "text": "4.2. Real-time Sensing for Human Subjects",
+            "page": 11
+        },
+        {
+            "level": "H2",
+            "text": "4.3. Method Overview",
+            "page": 12
+        },
+        {
+            "level": "H2",
+            "text": "4.4. Guidance Generation with LLM",
+            "page": 14
+        },
+        {
+            "level": "H2",
+            "text": "4.5. Motion Synthesis Using MotionGPT",
+            "page": 15
+        },
+        {
+            "level": "H2",
+            "text": "4.6. G-AI-HMS",
+            "page": 16
+        },
+        {
+            "level": "H1",
+            "text": "5. Data Analysis",
+            "page": 17
+        },
+        {
+            "level": "H2",
+            "text": "5.1. Spatial Normalization and Alignment",
+            "page": 19
+        },
+        {
+            "level": "H2",
+            "text": "5.2. Temporal Resampling",
+            "page": 21
+        },
+        {
+            "level": "H2",
+            "text": "5.3. Evaluation Metrics",
+            "page": 22
+        },
+        {
+            "level": "H2",
+            "text": "5.4. Joint-Level Error Metrics",
+            "page": 23
+        },
+        {
+            "level": "H1",
+            "text": "6. Results",
+            "page": 24
+        },
+        {
+            "level": "H2",
+            "text": "6.1. Task-Level Pose Similarity Metrics",
+            "page": 24
+        },
+        {
+            "level": "H2",
+            "text": "6.2. Joint-Level Analysis by Task",
+            "page": 25
+        },
+        {
+            "level": "H1",
+            "text": "7. Discussion",
+            "page": 29
+        },
+        {
+            "level": "H2",
+            "text": "7.1. Overview of Performance Trends",
+            "page": 29
+        },
+        {
+            "level": "H2",
+            "text": "7.2. Scientific Basis and Implications of Evaluation Metrics",
+            "page": 30
+        },
+        {
+            "level": "H2",
+            "text": "7.3. Task Complexity and Prompt Efficacy",
+            "page": 32
+        },
+        {
+            "level": "H2",
+            "text": "7.4. Anatomical Fidelity and Joint-Wise Dynamics",
+            "page": 33
+        },
+        {
+            "level": "H2",
+            "text": "7.5. Metric Cross-Analysis and Complementarity",
+            "page": 34
+        },
+        {
+            "level": "H2",
+            "text": "7.6. Case Study I: Practical Use of Low-Error Simulations",
+            "page": 34
+        },
+        {
+            "level": "H2",
+            "text": "7.7. Case Study II: Instruction Tuning for Prompt-to-Motion Alignment",
+            "page": 35
+        },
+        {
+            "level": "H2",
+            "text": "7.8. Toward Hybrid Prompting Systems",
+            "page": 35
+        },
+        {
+            "level": "H2",
+            "text": "7.9. Study Limitations",
+            "page": 35
+        }
+    ]
+}

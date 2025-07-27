@@ -1,0 +1,70 @@
+{
+    "title": "Minecraft and MCPACK Files",
+    "outline": [
+        {
+            "level": "H1",
+            "text": "What is Minecraft?",
+            "page": 1
+        },
+        {
+            "level": "H1",
+            "text": "The Open-Ended Nature of Minecraft",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Game Modes",
+            "page": 3
+        },
+        {
+            "level": "H2",
+            "text": "Survival Mode",
+            "page": 3
+        },
+        {
+            "level": "H2",
+            "text": "Creative Mode",
+            "page": 3
+        },
+        {
+            "level": "H1",
+            "text": "Player Customization: Skins and MCPACK Files",
+            "page": 4
+        },
+        {
+            "level": "H1",
+            "text": "Mobs in Minecraft: Passive, Neutral, and Hostile Entities",
+            "page": 5
+        },
+        {
+            "level": "H1",
+            "text": "Using MCPACK Files to Modify Mobs and Textures",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "How MCPACK Files Enable Customization",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "Minecraft Dimensions: The Overworld, Nether, and End",
+            "page": 7
+        },
+        {
+            "level": "H2",
+            "text": "The Nether",
+            "page": 7
+        },
+        {
+            "level": "H1",
+            "text": "Final Words",
+            "page": 8
+        },
+        {
+            "level": "H2",
+            "text": "The End",
+            "page": 8
+        }
+    ]
+}

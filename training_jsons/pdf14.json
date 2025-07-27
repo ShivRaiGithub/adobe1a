@@ -1,0 +1,125 @@
+{
+  "title": "CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "1 Introduction",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "2 CUDA-L1",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "2.1 Overview",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "2.2 SFT via Data Augmentation",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "2.3 Self-supervised Learning",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "2.4 Contrastive Reinforcement Learning",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "2.4.1 Contrastive-RL’s Advantages over Evolutionary LLM Approaches",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "2.4.2 Prompt Construction",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "2.4.3 Contrastive Exemplar Selection",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "2.4.4 Reward",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "2.4.5 RL Training",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "2.4.6 Addressing Reward Hacking in RL Training",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "3 Experiments and Analysis",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "3.1 KernelBench",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "3.2 Evaluation Metric",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "3.3 Main Results on KernelBench",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "3.4 Baseline Comparison",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "3.5 Generalization of A100-Optimized Kernels to Other GPU Architectures",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "3.6 Cuda Optimization Techniques",
+      "page": 9
+    },
+    {
+      "level": "H1",
+      "text": "4 Case Studies",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "4.1 Bidirectional GRU: why 2x+1x+1x = 466x ?",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "4.2 Conv3d",
+      "page": 11
+    },
+    {
+      "level": "H1",
+      "text": "5 Related Work",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "6 Conclusion",
+      "page": 13
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+ "title": "Cross-modal Causal Intervention for Alzheimer's Disease Prediction",
+ "outline": [
+   {
+     "level": "H1",
+     "text": "Abstract",
+     "page": 1
+   },
+   {
+     "level": "H1", 
+     "text": "CCS Concepts",
+     "page": 1
+   },
+   {
+     "level": "H1",
+     "text": "Keywords",
+     "page": 1
+   },
+   {
+     "level": "H1",
+     "text": "1 Introduction",
+     "page": 1
+   },
+   {
+     "level": "H1",
+     "text": "2 Related Work",
+     "page": 2
+   },
+   {
+     "level": "H2",
+     "text": "2.1 AD Diagnosis With Deep Learning",
+     "page": 2
+   },
+   {
+     "level": "H2",
+     "text": "2.2 Causal Inference",
+     "page": 2
+   },
+   {
+     "level": "H1",
+     "text": "3 Method",
+     "page": 3
+   },
+   {
+     "level": "H2",
+     "text": "3.1 Framework",
+     "page": 3
+   },
+   {
+     "level": "H2",
+     "text": "3.2 Causal Intervention",
+     "page": 3
+   },
+   {
+     "level": "H2",
+     "text": "3.3 Cross-modal Causal Fusion Module",
+     "page": 4
+   },
+   {
+     "level": "H3",
+     "text": "3.3.1 Cross-modal Attention Computation",
+     "page": 4
+   },
+   {
+     "level": "H3",
+     "text": "3.3.2 Causal Attention Computation",
+     "page": 4
+   },
+   {
+     "level": "H2",
+     "text": "3.4 Front-door Adjustment",
+     "page": 5
+   },
+   {
+     "level": "H2",
+     "text": "3.5 Textual Data Generation",
+     "page": 5
+   },
+   {
+     "level": "H2",
+     "text": "3.6 Pseudo Code",
+     "page": 6
+   },
+   {
+     "level": "H1",
+     "text": "4 Experiment",
+     "page": 6
+   },
+   {
+     "level": "H2",
+     "text": "4.1 Datasets",
+     "page": 6
+   },
+   {
+     "level": "H2",
+     "text": "4.2 Experimental Settings",
+     "page": 6
+   },
+   {
+     "level": "H2",
+     "text": "4.3 Implementation Details",
+     "page": 6
+   },
+   {
+     "level": "H2",
+     "text": "4.4 Performance Comparison",
+     "page": 6
+   },
+   {
+     "level": "H2",
+     "text": "4.5 Ablation Study",
+     "page": 7
+   },
+   {
+     "level": "H2",
+     "text": "4.6 Visualization",
+     "page": 7
+   },
+   {
+     "level": "H1",
+     "text": "5 Conclusion",
+     "page": 8
+   },
+   {
+     "level": "H1",
+     "text": "References",
+     "page": 8
+   }
+ ]
+}

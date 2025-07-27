@@ -1,0 +1,4870 @@
+{
+  "title": "arXiv:2507.13958v1  [cs.AI]  18 Jul 2025",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Towards Constraint Temporal Answer Set Programming",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Reasoning about action and change is crucial for understanding how dynamic systems",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "mark on a road with a speed limit of 90 km/h. A car is initially traveling at 80 km/h.",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "inertia and default reasoning.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "complements this by allowing us to directly reason",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "with numeric and other constraints. Furthermore, its equilibrium extension provides",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "solid logical foundations for tackling nonmonotonic constraint satisfaction problems,",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "The syntax of the logic",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Temporal Here-and-There with constraints",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": ") relies on",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "a signature",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": ", akin to constraint satisfaction problems (CSPs; Dechter 2003).",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Specifically,",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "denotes a set of variables and",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "represents the domain of values, often",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "by an expression",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "where",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": ", while overloading the temporal modal",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "= 0 refers to the value of",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "in the current state. For notational convenience, we",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Accordingly, an",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "-ary temporal constraint atom",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "is often represented as",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "further illustrate, the atom (",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "= 4) can be read as \u201c",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "had value 4 three states ago\u201d,",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "modalities. We use outlined operators to refer to future modalities and solid ones for",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "if",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": ". An",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "interpretation is a pair",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "of valuations such",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "represents a finite trace with three valuations (separated by \u2018",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "\u2019) that assign different",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "values to",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "except at the second state where",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "is undefined. The",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "relation can be",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "our previous example trace",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "satisfies",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "because both",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "traces coincide in the variables defined in",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": ", but the new trace assigns",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "1 at the",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "second state, while",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "left it undefined. As before, we say",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "if",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "for all",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "the syntax and semantics of expressions originating from external theories. In",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": ", a",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "atom corresponds in",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "to checking whether a valuation belongs to a denotation or",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "+",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "5 is satisfied at time point",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "when the addition of the values of",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "at",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "+ 2 is smaller or equal to 5. In the temporal case, evaluating a temporal constraint",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "relation",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "as [",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "]",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": ". Note that this definition tolerates undefined variables. Given a",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "As an example of an atom with a non-strict solution, we could define an atom such as",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Given an",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "trace",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "and a time point",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "[0",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "), we have the following",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "As a first example, consider the formula (",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "= 4)",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": ") whose atoms have the",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "do not depend on the \u201cnext\u201d",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "prefix that qualifies each variable inside a constraint.",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "of",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "depends on the sequence of valuations in the trace. Moreover, both [",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "= 4] and",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "because",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "7]. However, if the constraint is evaluated at time point 1, we get",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Finally, consider the equation",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "with [",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "] =",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": ". Clearly, we have",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "3",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "since",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": ") = 6 and 6",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "]. However, this is not the case at time point 0",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "if a partial valuation",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "satisfies an atom",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": ", then any partial valuation",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "that",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Given this correspondence, we can show the following result, where",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "for all",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "[0",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "). An",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "trace",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "H",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "T",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "is a pair of traces",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "H",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "= (",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "T",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "= (",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "satisfying",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "for all",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "[0",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "). An",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "trace",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "H",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "T",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "satisfies a",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "To encode",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "within",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": ", we consider the signature",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "where",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "is considered as true.",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Accordingly, we set [",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "] =",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "for all",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": ". Then,",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "we define the bijective mapping",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "from",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "traces to",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "traces as follows.",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Given an",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "For any",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "trace",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "H",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "T",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": ", we have for all temporal formulas",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "and all",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "[0",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": ") that",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "from",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "into Quantified",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "with decidable equality, evaluable functions (Cabalar",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "is a set of predicate names including equality (=) and a strict order relation",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "(the non-strict version",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "is defined as usual). We assume that",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "and +",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": ".",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "where",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "is a predicate that simulates the behavior of",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "and each",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "is a partial",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Following Cabalar (2011), a",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ") interpretation is a structure",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ", where",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "= (",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ") and",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "= (",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ") such that",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ". Given a first-order formula",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "and a",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "A",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ") interpretation",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "is a",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ") model of a formula",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "when",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ". A",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Let",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "be a",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "trace and let",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "be its corresponding",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ") interpretation. For all",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "[0",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ") and every temporal formula",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ", we have",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Let",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "be a",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "trace and let",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "be its corresponding",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "first-order theorem provers for solving inference problems for",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": ". For instance, one",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "In this section, we consider the fragment of",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "interpreted over linear constraints",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "where",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ", and",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "for 0",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ". Multiplication and addition are",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "may be omitted when contextually clear. Given a linear term",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "as in",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ", we define",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u2022\u2022",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "A",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "linear temporal constraint atom",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "is a temporal constraint atom of the form",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "where",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "are linear terms. We use the abbreviation",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ", and",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "for",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "), (",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "), and (",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "), respectively. Similarly,",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ") =",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "), for",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ". Given our focus on strict",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "solution tables, we have [",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "for all",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ", where",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "is the number of terms",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "in",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ". More generally, given a constraint atom",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "with a strict relation, we define",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "its",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "complement",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "constraint as [",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "] =",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "] (which is also strict). The interaction of",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "We have that [",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "] =",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "], and therefore [",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "] = [",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "]. By",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "of length 2 defined as",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ") =",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "for",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "0",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "1",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": ". Then, we have that",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "When",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "is extended with linear constraints, Cabalar et al. (2016) introduce an",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "of equality that allows us to check if a variable has a defined value. To illustrate this,",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "The equality",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "implies that any assignment to",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "must also be an assignment to",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": ", and vice versa. Given that",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "is not derivable,",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "appears to be undefined in this",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Because",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "cannot be established (due to the underivability of",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "making",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "undefined), the resulting",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "model has",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "all undefined. Indeed, within",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "For all",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "traces",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "and for all linear expressions",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": ", the",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "where",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "is a linear temporal term. The assignment operator can be seen as a derived",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "where",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": ":=",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "is an assignment and each",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "is a linear temporal constraint atom for",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "0",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": ". Placing Rule",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "under the",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "operator ensures its satisfaction across all",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "The logic programming fragment of",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "offers a powerful approach to modeling",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "various aspects of dynamic systems, including the representation of inertia rules and",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "To formalize this scenario within",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": ", we introduce the following variables. The",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "numerical fluents",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "(ranging over",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": ") represent the car\u2019s position and speed,",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "respectively. The numerical variables",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "(ranging over",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": ") refer to the",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "in Rule",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": ": if the car\u2019s speed (",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": ") exceeds the radar\u2019s speed limit (",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": ") at or after",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "passing the radar\u2019s position (",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": ") at any time, a fine is issued. Finally, to model the",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Between time points 4 and 5, the car\u2019s speed exceeds the limit as it passes the radar\u2019s",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "We have integrated two established extensions of",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": ", namely",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "(along",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "reasoning with constraints. Our work is inspired by extensions of (monotonic) Linear",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Temporal Logic (",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": ") interpreted over constraint systems and first-order theories, in",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "next and previous operators to non-Boolean variables. In many of these cases, the",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "spatial formalisms (Vilain and Kautz 1986; Wolter and Zakharyaschev 2000; Balbiani",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "their earlier work (Giordano et al. 2013b). This approach utilizes logic programming",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "syntax and semantics, which differs from our",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "-based approach. Furthermore, their",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Kamp\u2019s translation (Kamp 1968) to our approach by mapping",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "formulas into",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "equilibrium models. We further investigated the logic programming fragment of",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "this line of research will necessitate adapting existing computational methods (Becker",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "As a first step, we have only considered linear constraints. Future work includes",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "constraints would allow for expressing congruence relations among different variables,",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "and Condotta 2002). When considering qualitative spatial constraints expressed using",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "This work was supported by the DFG grant SCHA 550/15 (Germany), the Etoiles",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Montantes CTASP project (Region Pays de la Loire, France), and the MICI-",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "there exists (",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "s.t.",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ") =",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". Since",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ", then",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Antisymmetry",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ": Assume by contradiction that",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "but",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". It",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Proof of Proposition 2.",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "By structural induction. Let us take",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". For the",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ") iff (",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ")]",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "and (",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ")]. Therefore,",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ": if",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "then for all",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "either",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "or",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "for some",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". By induction, for all",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "either",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "or",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "for some",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ": if",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "then",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "0 and",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "1",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". By induction,",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "1",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Proof of Corollary 2.",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "We take",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". From left to right, if",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "then,",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "by Proposition 2,",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". Therefore,",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". From right to left, if",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ", then by Proposition 2,",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": ". From the satisfaction relation it",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "and the solution table. For the rest of the connectives we use both",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Proof of Proposition 12.",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "We first prove that",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "is injective. Let us assume towards",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "a contradiction that there exist two",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "traces",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "H",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "T",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "H",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "T",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "such",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "let us assume that there exists a propositional variable",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "such that",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "but",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": ".",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Case",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": ": from left to right, if",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "H",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "T",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": ", it implies that",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "1 and",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "because of the satisfaction relation. A similar argument applies to the converse",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "The proof for",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "can be done by using the induction",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Since",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")],",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "by",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "definition,",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")))",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ". Since (",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")], by definition,",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")))",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ".",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Conversely, let us assume that",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "))[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "]. Therefore,",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")))",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ". Since (",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "),",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Because of the correspondence, we get that (",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")) and",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")) belong to [",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")]. Therefore,",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "The proof for disjunction, conjunction and implication comes directly from the",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Case",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ": from left to right, if",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "then",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "1 and",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+ 1",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ". By",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "follows that",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "), which means that",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "].",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "From right to left, if",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "] then",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "), so",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+ 1]. By induction hypothesis,",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "+ 1",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "so",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "by",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Case",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ": from left to right, if",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "then 0",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "1",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ". By",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "follows that",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "), which means that",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "].",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "From right to left, if",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "] then",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "), so",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "1]. By induction hypothesis,",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "1",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ". Since",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "0,",
+      "page": 18
+    },
+    {
+      "level": "H2",
+      "text": "\u2022",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "s.t.",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "for all",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "). By induction hypothesis",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "it follows that",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "] for some",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "] for all",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "). By reasoning on first-order logic, it follows that",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")[",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "].",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Proof of Proposition 7.",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "We begin by noting that the ordering relation between",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "traces",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "is also in a one-to-one correspondence with the ordering relation",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "). Then, the result follows from the definitions of equilibrium models",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "If",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "then",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "both",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ")] and (",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "[",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ")]. By",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "the definition of [",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ")] it follows that (",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "))",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "satisfaction relation we conclude that",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ") and",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ". Since",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ")",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "and",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ",",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ". Since the",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "was chosen arbitrary, it follows that",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "M",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "=",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ", for all",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "(",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": ").",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    },
+    {
+      "level": "H2",
+      "text": "\u25e6",
+      "page": 19
+    }
+  ]
+}

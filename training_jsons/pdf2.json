@@ -1,0 +1,235 @@
+{
+ "title": "FIRST YEAR ENGINEERING SYLLABUS",
+ "outline": [
+   {
+     "level": "H1",
+     "text": "FIRST YEAR",
+     "page": 1
+   },
+   {
+     "level": "H2",
+     "text": "CHY1001: Engineering Chemistry [2 1 2 4]",
+     "page": 1
+   },
+   {
+     "level": "H2",
+     "text": "MAS1001: Calculus and Matrices [2 1 0 3]",
+     "page": 1
+   },
+   {
+     "level": "H2",
+     "text": "EEE1002: Electrical & Electronics Systems [3 1 0 4]",
+     "page": 1
+   },
+   {
+     "level": "H2",
+     "text": "MEE1007: Creativity & Innovation [1 1 0 2]",
+     "page": 2
+   },
+   {
+     "level": "H2",
+     "text": "CSE1002: Problem Solving Using Computers [2 1 0 3]",
+     "page": 3
+   },
+   {
+     "level": "H2",
+     "text": "MEE1035: Engineering Graphics Lab [0 0 2 1]",
+     "page": 3
+   },
+   {
+     "level": "H2",
+     "text": "LLC1001: Technical Writing Clinic 1 [0 0 2 1]",
+     "page": 4
+   },
+   {
+     "level": "H2",
+     "text": "EEE1030: Electrical & Electronics Lab [1 0 2 1]",
+     "page": 4
+   },
+   {
+     "level": "H2",
+     "text": "CSE1031: Problem Solving Using Computers Lab [0 0 2 1]",
+     "page": 4
+   },
+   {
+     "level": "H2",
+     "text": "Math Bridge for BioTech",
+     "page": 5
+   },
+   {
+     "level": "H2",
+     "text": "PHY1001: Engineering Physics [2 1 2 4]",
+     "page": 6
+   },
+   {
+     "level": "H2",
+     "text": "MAS1002: Computational Mathematics [2 1 0 3]",
+     "page": 7
+   },
+   {
+     "level": "H2",
+     "text": "CHY1002: Environmental Studies [2 0 0 2]",
+     "page": 7
+   },
+   {
+     "level": "H2",
+     "text": "CIV1201: Engineering Materials & Mechanics [3 1 0 4]",
+     "page": 8
+   },
+   {
+     "level": "H2",
+     "text": "MEE1006: MATLAB for Engineers [2 0 0 2]",
+     "page": 9
+   },
+   {
+     "level": "H2",
+     "text": "BIT1001: Biology for Engineers [2 0 0 2]",
+     "page": 9
+   },
+   {
+     "level": "H2",
+     "text": "LAW1010: Constitution of India [1 0 0 1]",
+     "page": 10
+   },
+   {
+     "level": "H2",
+     "text": "MCE1030: IoT Fab Lab [0 0 2 1]",
+     "page": 10
+   },
+   {
+     "level": "H2",
+     "text": "DOA1001: Universal Human Values [0 0 2 1]",
+     "page": 11
+   },
+   {
+     "level": "H1",
+     "text": "THIRD SEMESTER",
+     "page": 11
+   },
+   {
+     "level": "H2",
+     "text": "ECE2101 Electronic Devices-I [3 1 0 4]",
+     "page": 11
+   },
+   {
+     "level": "H2",
+     "text": "ECE2102 Digital Electronics [3 1 0 4]",
+     "page": 12
+   },
+   {
+     "level": "H2",
+     "text": "ECE2103 Signals and systems [3 1 0 4]",
+     "page": 13
+   },
+   {
+     "level": "H2",
+     "text": "ECE2120 Circuits & network theory [3 0 2 4]",
+     "page": 13
+   },
+   {
+     "level": "H2",
+     "text": "ECE2121 Linear Integrated circuits [3 0 2 4]",
+     "page": 14
+   },
+   {
+     "level": "H2",
+     "text": "ECE2130 Electronic devices Lab-1 [0 0 2 1]",
+     "page": 15
+   },
+   {
+     "level": "H2",
+     "text": "ECE2131 Digital Electronics Lab [0 0 2 1]",
+     "page": 15
+   },
+   {
+     "level": "H2",
+     "text": "ECE2170 Project Based Learning 1 [0 0 2 1]",
+     "page": 16
+   },
+   {
+     "level": "H1",
+     "text": "FOURTH SEMESTER",
+     "page": 16
+   },
+   {
+     "level": "H2",
+     "text": "ECE2201 Electronic Devices-II [4 0 0 4]",
+     "page": 16
+   },
+   {
+     "level": "H2",
+     "text": "ECE2202 Computer and Processor Architecture [3 1 0 4]",
+     "page": 16
+   },
+   {
+     "level": "H2",
+     "text": "ECE2220 System Design using HDL [3 0 2 4]",
+     "page": 17
+   },
+   {
+     "level": "H2",
+     "text": "ECE2221 Electromagnetic Field Theory [4 0 0 4]",
+     "page": 18
+   },
+   {
+     "level": "H2",
+     "text": "ECE2240 Data Structures & Algorithms [3 0 0 3]",
+     "page": 18
+   },
+   {
+     "level": "H2",
+     "text": "ECE2241 Optical Components and Sensors [3 0 0 3]",
+     "page": 19
+   },
+   {
+     "level": "H2",
+     "text": "ECE2242 Fundamentals of telecommunications [3 0 0 3]",
+     "page": 19
+   },
+   {
+     "level": "H2",
+     "text": "ECE2230 SPICE Lab [0 0 2 1]",
+     "page": 20
+   },
+   {
+     "level": "H2",
+     "text": "ECE2231 Computer and Processor Architecture Lab [0 0 2 1]",
+     "page": 20
+   },
+   {
+     "level": "H2",
+     "text": "ECE2270 Project based learning lab-II [0 0 2 1]",
+     "page": 21
+   },
+   {
+     "level": "H1",
+     "text": "OPEN ELECTIVES",
+     "page": 21
+   },
+   {
+     "level": "H2",
+     "text": "ECE0001 Introduction To Communication Systems [3 0 0 3]",
+     "page": 21
+   },
+   {
+     "level": "H2",
+     "text": "ECE0002 Introduction To Game Theory [3 0 0 3]",
+     "page": 21
+   },
+   {
+     "level": "H2",
+     "text": "ECE0003 *Stress Free living [3 0 0 3]",
+     "page": 22
+   },
+   {
+     "level": "H2",
+     "text": "ECE0051 Excel Fundamentals for Data Analysis [3 0 0 3]",
+     "page": 23
+   },
+   {
+     "level": "H2",
+     "text": "ECE0052 Introduction to Word Processing [3 0 0 3]",
+     "page": 23
+   }
+ ]
+}

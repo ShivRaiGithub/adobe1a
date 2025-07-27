@@ -1,0 +1,55 @@
+{
+  "title": "Towards Constraint Temporal Answer Set Programming",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "1 Introduction",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "2 Temporal Here-and-There with Constraints",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "2.1 THTc as a Conservative Extension of HTc",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "2.2 THTc as a Conservative Extension of THTf",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "3 From THTc to Quantified HT with Evaluable Functions",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "4 Logic Programs with Temporal Linear Constraints",
+      "page": 11
+    },
+    {
+      "level": "H1",
+      "text": "5 Discussion",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "Acknowledgments",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "References",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "Appendix A Proofs: For reviewing purposes",
+      "page": 16
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+manual:
+
+1. Training Phase - Use Your Training Data
+Build Docker Image (This will train your model):
+bash# In WSL Ubuntu terminal
+docker build --platform linux/amd64 -t mysolutionname:somerandomidentifier .
+This will:
+
+Install dependencies from requirements.txt
+Copy training_pdfs/ and training_jsons/
+Run python train.py (trains XGBoost model)
+Save model to /app/model/
+
+2. Test Training Success
+Check if model was created:
+bashdocker run --rm mysolutionname:somerandomidentifier ls -la model/
+Should show:
+heading_model.joblib
+label_map.json
+features.json (optional)
+3. Test Inference Using Training PDFs
+Since you don't have separate test PDFs yet, use some of your training PDFs for testing:
+Create test input from training data:
+bash# Create test directories
+mkdir -p input output
+
+# Copy a few training PDFs as test samples
+cp training_pdfs/pdf1.pdf input/
+cp training_pdfs/pdf2.pdf input/
+# Add more if you want
+Run inference:
+bashdocker run --rm \
+  -v $(pwd)/input:/app/input \
+  -v $(pwd)/output:/app/output \
+  --network none \
+  mysolutionname:somerandomidentifier
+Check results:
+bashls output/
+# Should show: pdf1.json, pdf2.json, pdf1.csv, pdf2.csv
+
+# Compare with ground truth
+cat output/pdf1.json
+cat training_jsons/pdf1.json  # Compare with original

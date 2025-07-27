@@ -1,0 +1,90 @@
+{
+  "title": "Glucose-ML: A collection of longitudinal diabetes datasets for development of robust AI solutions",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Abstract",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "1 Introduction",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "2 Background & Related Work",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "3 GlucoseML Overview",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "3.1 Dataset accessibility",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "3.2 Ethics and fairness",
+      "page": 4
+    },
+    {
+      "level": "H1",
+      "text": "4 Comparative analysis of diabetes datasets",
+      "page": 5
+    },
+    {
+      "level": "H1",
+      "text": "5 Case study: Blood glucose prediction",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "5.1 Naïve Baseline Algorithms",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "5.2 Data Cleaning",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "5.3 Algorithm Implementation, Handling Missing Data, and Performance Evaluation",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "5.4 Results for Blood Glucose Prediction",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "6 Discussion",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "6.1 Recommendations for developing robust AI solutions for diabetes and beyond",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "6.2 Ethical considerations",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "6.3 Limitations",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "References",
+      "page": 11
+    }
+  ]
+}

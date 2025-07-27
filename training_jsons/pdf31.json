@@ -1,0 +1,66 @@
+{
+    "title": "Multi-Page Report",
+    "outline": [
+        {
+            "level": "H1",
+            "text": "Table of Contents",
+            "page": 2
+        },
+        {
+            "level": "H2",
+            "text": "Introduction",
+            "page": 3
+        },
+        {
+            "level": "H2",
+            "text": "Market Analysis",
+            "page": 4
+        },
+        {
+            "level": "H2",
+            "text": "Data Analysis",
+            "page": 5
+        },
+        {
+            "level": "H2",
+            "text": "Product Overview",
+            "page": 6
+        },
+        {
+            "level": "H3",
+            "text": "Key Features",
+            "page": 6
+        },
+        {
+            "level": "H2",
+            "text": "Results & Discussion",
+            "page": 7
+        },
+        {
+            "level": "H2",
+            "text": "Marketing Strategy",
+            "page": 8
+        },
+        {
+            "level": "H3",
+            "text": "1st Strategy",
+            "page": 8
+        },
+        {
+            "level": "H3",
+            "text": "2nd Strategy",
+            "page": 8
+        },
+        {
+            "level": "H2",
+            "text": "Sales Projections",
+            "page": 9
+        },
+        {
+            "level": "H2",
+            "text": "Launch Timeline",
+            "page": 10
+        }
+        
+    ]
+}

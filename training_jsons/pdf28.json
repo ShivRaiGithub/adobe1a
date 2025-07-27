@@ -1,0 +1,105 @@
+{
+    "title": "Sample Text PDF",
+    "outline": [
+        {
+            "level": "H1",
+            "text": "Heading Example",
+            "page": 1
+        },
+        {
+            "level": "H1",
+            "text": "Section 1: Introduction",
+            "page": 1
+        },
+        {
+            "level": "H1",
+            "text": "Section 2: Text Formatting",
+            "page": 1
+        },
+        {
+            "level": "H1",
+            "text": "Section 3: Sample Paragraphs",
+            "page": 1
+        },
+        {
+            "level": "H1",
+            "text": "Section 4: Lists",
+            "page": 1
+        },
+        {
+            "level": "H2",
+            "text": "Unordered List",
+            "page": 1
+        },
+        {
+            "level": "H2",
+            "text": "Ordered List",
+            "page": 1
+        },
+        {
+            "level": "H1",
+            "text": "Section 5: Table Example",
+            "page": 1
+        },
+        {
+            "level": "H1",
+            "text": "Section 6: Quote Example",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Section 7: Conclusion",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Heading Example",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Section 1: Introduction",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Section 2: Text Formatting",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Section 3: Sample Paragraphs",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Section 4: Lists",
+            "page": 3
+        },
+        {
+            "level": "H2",
+            "text": "Unordered List",
+            "page": 3
+        },
+        {
+            "level": "H2",
+            "text": "Ordered List",
+            "page": 3
+        },
+        {
+            "level": "H1",
+            "text": "Section 5: Table Example",
+            "page": 3
+        },
+        {
+            "level": "H1",
+            "text": "Section 6: Quote Example",
+            "page": 3
+        },
+        {
+            "level": "H1",
+            "text": "Section 7: Conclusion",
+            "page": 3
+        }
+    ]
+}
