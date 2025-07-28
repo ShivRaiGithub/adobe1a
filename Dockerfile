@@ -1,7 +1,7 @@
 FROM --platform=linux/amd64 python:3.9-slim
 
 # Set working directory
-WORKDIR / app
+WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -9,23 +9,20 @@ RUN apt-get update && apt-get install -y \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first for better caching
+# Copy requirements first to leverage Docker caching
 COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy training data and scripts
-COPY training_pdfs/ ./training_pdfs/
-COPY training_jsons/ ./training_jsons/
-COPY train.py .
-COPY test2.py .
+# Copy all source code
+COPY . .
 
-# Train the XGBoost model during build
+# Create necessary directories
+RUN mkdir -p model training_csvs training_jsons training_pdfs input output
+
+# Train the model during build time
 RUN python train.py
 
-# Create input and output directories
-RUN mkdir -p /app/input /app/output
-
-# Set the default command to run inference
-CMD ["python", "test2.py"]
+# Set the default command to run the inference script
+CMD ["python", "test.py"]

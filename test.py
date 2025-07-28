@@ -11,11 +11,9 @@ MODEL_PATH = "model/heading_model.joblib"
 LABEL_MAP_PATH = "model/label_map.json"
 INPUT_DIR = "/app/input"
 OUTPUT_DIR = "/app/output"
-CSV_OUTPUT_DIR = "/app/output"  # Directory to save CSV files
 
 # Ensure output directories exist
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(CSV_OUTPUT_DIR, exist_ok=True)
 
 def is_likely_header_footer(text, page_num):
     """
@@ -136,23 +134,6 @@ def extract_features_from_pdf(pdf_path, filter_headers_footers=True, header_thre
     
     doc.close()
     return data
-
-def save_to_csv(data, pdf_path):
-    """Save extracted features to CSV file, similar to generate_csv.py"""
-    if not data:
-        print("⚠️ No data to save to CSV")
-        return None
-    
-    base_name = os.path.splitext(os.path.basename(pdf_path))[0]
-    csv_path = os.path.join(CSV_OUTPUT_DIR, f"{base_name}.csv")
-    
-    with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(data[0].keys()))
-        writer.writeheader()
-        writer.writerows(data)
-    
-    print(f"📊 CSV saved to: {csv_path}")
-    return csv_path
 
 def enhance_features(df):
     """Add enhanced features to match training data"""
@@ -547,9 +528,6 @@ def process_single_pdf(pdf_path):
 
     print(f"📝 Extracted {len(features)} text spans")
     
-    # Save to CSV (like generate_csv.py)
-    csv_path = save_to_csv(features, pdf_path)
-    
     # Create DataFrame for classification
     df = pd.DataFrame(features)
     
@@ -580,8 +558,7 @@ def process_single_pdf(pdf_path):
     json_output_path = save_json(df_pred, pdf_filename)
     
     print(f"\n🎉 Processing completed for {pdf_filename}!")
-    print(f"📊 CSV file: {csv_path}")
-    print(f"📄 JSON output: {json_output_path}")
+    print(f" JSON output: {json_output_path}")
     
     return True
 
