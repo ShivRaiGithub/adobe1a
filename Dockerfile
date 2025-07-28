@@ -1,6 +1,6 @@
 FROM --platform=linux/amd64 python:3.9-slim
 
-# Set working directory
+# Set working directory inside the container
 WORKDIR /app
 
 # Install system dependencies
@@ -9,20 +9,20 @@ RUN apt-get update && apt-get install -y \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first to leverage Docker caching
+# Copy only requirements.txt first to use Docker cache efficiently
 COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all source code
+# Copy all source code and training data
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p model training_csvs training_jsons training_pdfs input output
+# Ensure expected folders exist (even though COPY brings them in)
+RUN mkdir -p input output model
 
-# Train the model during build time
+# Train the model during build
 RUN python train.py
 
-# Set the default command to run the inference script
+# Set default command when container runs
 CMD ["python", "test.py"]
